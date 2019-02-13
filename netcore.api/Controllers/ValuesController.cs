@@ -14,7 +14,7 @@ namespace netcore.api.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "value1", "value2",Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")};
         }
 
         // GET api/values/5
